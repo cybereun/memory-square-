@@ -1,0 +1,22 @@
+{
+  "name": "Memory Square",
+  "short_name": "MemorySquare",
+  "description": "Remember the hidden cards and clear each square board.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#081826",
+  "theme_color": "#081826",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

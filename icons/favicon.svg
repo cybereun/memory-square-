@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Memory Square icon">
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="#081826"/>
+  <rect x="24" y="24" width="34" height="34" rx="9" fill="#fdf6e3"/>
+  <rect x="70" y="24" width="34" height="34" rx="9" fill="#102b3f" stroke="#ffffff" stroke-width="3"/>
+  <rect x="24" y="70" width="34" height="34" rx="9" fill="#fdf6e3"/>
+  <rect x="70" y="70" width="34" height="34" rx="9" fill="#ffd166" stroke="#ff8c42" stroke-width="3"/>
+  <path d="M80 38c0-6 4.6-9.5 10-9.5 5.4 0 9.8 3.7 9.8 8.8 0 4.2-2.6 6.3-5.2 7.8-2.3 1.4-3.3 2.7-3.3 5.3" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="91" cy="55" r="2.8" fill="#ffffff"/>
+  <path d="M92 72l3.8 7.7 8.5 1.2-6.2 5.9 1.5 8.5-7.6-4-7.5 4 1.4-8.5-6.1-5.9 8.5-1.2z" fill="#ff8c42"/>
+</svg>

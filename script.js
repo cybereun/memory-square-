@@ -66,6 +66,7 @@ elements.startButton.addEventListener("click", startFromLevelOne);
 elements.restartButton.addEventListener("click", startFromLevelOne);
 elements.board.addEventListener("click", handleBoardClick);
 
+registerServiceWorker();
 updateHud();
 renderBoard();
 
@@ -650,4 +651,14 @@ function clearScheduledActions() {
   state.previewTimeoutId = null;
   state.pendingActionTimeoutIds = [];
   state.openCardIds = [];
+}
+
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) {
+    return;
+  }
+
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {});
+  });
 }
