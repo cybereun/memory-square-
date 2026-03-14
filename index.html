@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>무한 기억력 그림 맞추기</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="background-orb orb-a"></div>
+      <div class="background-orb orb-b"></div>
+      <div class="background-grid"></div>
+
+      <main class="game-panel">
+        <section class="hero">
+          <p class="eyebrow">Infinite Memory Challenge</p>
+          <h1>🧠 메모리 스퀘어</h1>
+          <div class="hero-note">
+            <p class="hero-tagline">숨겨진 그림을 외워 같은 카드를 모두 찾아내세요.</p>
+            <p class="hero-copy">
+              레벨이 올라갈수록 그림 수가 늘어나고, 시간은 1~20레벨 60초,
+              21~40레벨 120초, 41레벨부터 180초입니다.
+            </p>
+          </div>
+        </section>
+
+        <section class="hud" aria-label="게임 상태">
+          <div class="stat-card">
+            <span class="stat-label">레벨</span>
+            <strong id="levelValue">1</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">지능 지수</span>
+            <strong id="iqValue">100</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">남은 시간</span>
+            <strong id="timerValue">60</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">시도 횟수</span>
+            <strong id="movesValue">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">최고 레벨</span>
+            <strong id="bestValue">1</strong>
+          </div>
+        </section>
+
+        <section class="controls">
+          <button id="startButton" class="primary-button" type="button">
+            게임 시작
+          </button>
+          <button id="restartButton" class="secondary-button" type="button">
+            처음부터 다시
+          </button>
+          <p id="statusMessage" class="status-message" aria-live="polite">
+            시작 버튼을 누르면 그림이 잠깐 공개됩니다.
+          </p>
+        </section>
+
+        <section class="board-frame">
+          <div id="board" class="board" aria-label="그림 카드 게임판"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
