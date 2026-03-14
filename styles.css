@@ -411,11 +411,75 @@ select {
 
 @media (max-width: 560px) {
   .page-shell {
-    padding-inline: 12px;
+    padding: 12px 8px 18px;
+  }
+
+  .game-panel {
+    padding: 14px 12px;
+    border-radius: 20px;
+  }
+
+  .hero h1 {
+    margin: 4px 0 6px;
+    font-size: clamp(1.7rem, 7vw, 2.25rem);
+    line-height: 1.04;
+  }
+
+  .eyebrow {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-note {
+    margin-top: 8px;
+    padding: 9px 10px;
+    gap: 4px;
+    border-radius: 14px;
+  }
+
+  .hero-tagline {
+    font-size: 0.78rem;
+  }
+
+  .hero-copy {
+    font-size: 0.7rem;
+    line-height: 1.35;
   }
 
   .hud {
+    margin-top: 14px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 10px 12px;
+    border-radius: 16px;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+  }
+
+  .stat-card strong {
+    margin-top: 4px;
+    font-size: 1.1rem;
+  }
+
+  .controls {
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    padding: 10px 14px;
+    font-size: 0.82rem;
+  }
+
+  .status-message {
+    min-height: 18px;
+    font-size: 0.74rem;
   }
 
   .board {
@@ -424,6 +488,14 @@ select {
   }
 
   .board-frame {
-    padding: 12px;
+    margin-top: 16px;
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .empty-state {
+    min-height: 140px;
+    padding: 18px;
+    font-size: 0.92rem;
   }
 }
