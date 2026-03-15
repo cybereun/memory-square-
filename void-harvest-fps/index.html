@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Void Harvest</title>
+    <meta
+      name="description"
+      content="우주 괴물 웨이브를 돌파하는 SF 호러 브라우저 FPS"
+    />
+    <meta name="theme-color" content="#07111c" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Void Harvest" />
+    <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="backdrop backdrop-grid"></div>
+      <div class="backdrop backdrop-glow"></div>
+
+      <header class="hud-bar">
+        <div class="brand-block">
+          <p class="eyebrow">Deep Space Containment Breach</p>
+          <h1>VOID HARVEST</h1>
+          <p id="phaseMessage" class="phase-message">
+            기지 내부에 괴물이 퍼졌습니다. 진입해서 생존하십시오.
+          </p>
+        </div>
+
+        <div class="stats-grid" aria-label="게임 상태">
+          <div class="stat-card">
+            <span>LEVEL</span>
+            <strong id="levelValue">1</strong>
+          </div>
+          <div class="stat-card">
+            <span>HP</span>
+            <strong id="healthValue">100</strong>
+          </div>
+          <div class="stat-card">
+            <span>KILLS</span>
+            <strong id="killsValue">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>REMAIN</span>
+            <strong id="enemiesValue">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>BEST</span>
+            <strong id="bestValue">1</strong>
+          </div>
+          <div class="stat-card stat-card-weapon">
+            <span>WEAPON</span>
+            <strong id="weaponValue">PLASMA</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="arena-shell">
+        <div class="canvas-frame">
+          <canvas id="gameCanvas" aria-label="우주 괴물 FPS 화면"></canvas>
+          <div class="scanline"></div>
+          <div class="vignette"></div>
+          <div id="damageOverlay" class="damage-overlay"></div>
+          <div class="crosshair" aria-hidden="true"></div>
+
+          <section id="overlayPanel" class="overlay-panel">
+            <div class="overlay-card">
+              <p class="overlay-kicker">Planetfall Strike Protocol</p>
+              <h2>우주 괴물 FPS</h2>
+              <p class="overlay-copy">
+                폐쇄된 우주 기지에서 끝없이 몰려오는 괴물을 섬멸하십시오.
+                3레벨씩 오를 때마다 적 수가 증가합니다.
+              </p>
+
+              <div class="control-grid">
+                <div><span>이동</span><strong>W A S D</strong></div>
+                <div><span>질주</span><strong>Shift</strong></div>
+                <div><span>점프</span><strong>Space</strong></div>
+                <div><span>조준/회전</span><strong>마우스</strong></div>
+                <div><span>사격</span><strong>좌클릭</strong></div>
+                <div><span>무기 교체</span><strong>우클릭</strong></div>
+                <div><span>목표</span><strong>전멸 후 생존</strong></div>
+              </div>
+
+              <div class="button-row">
+                <button id="startButton" class="primary-button" type="button">
+                  작전 시작
+                </button>
+                <button id="restartButton" class="secondary-button" type="button">
+                  다시 투입
+                </button>
+              </div>
+
+              <p id="statusMessage" class="status-message" aria-live="polite">
+                시작 후 화면을 클릭하면 마우스 포인터가 잠기고 FPS 조작이 활성화됩니다.
+              </p>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
